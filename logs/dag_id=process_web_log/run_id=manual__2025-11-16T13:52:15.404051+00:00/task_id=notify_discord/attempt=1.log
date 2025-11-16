@@ -1,0 +1,21 @@
+[2025-11-16T14:52:23.020+0100] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-16T14:52:23.025+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_web_log.notify_discord manual__2025-11-16T13:52:15.404051+00:00 [queued]>
+[2025-11-16T14:52:23.026+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_web_log.notify_discord manual__2025-11-16T13:52:15.404051+00:00 [queued]>
+[2025-11-16T14:52:23.026+0100] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-16T14:52:23.029+0100] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): notify_discord> on 2025-11-16 13:52:15.404051+00:00
+[2025-11-16T14:52:23.033+0100] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'process_web_log', 'notify_discord', 'manual__2025-11-16T13:52:15.404051+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/process_web_log.py', '--cfg-path', '/var/folders/8s/qyzh_26n0vb1qz3ft50_pn1c0000gn/T/tmpdpnt8hey']
+[2025-11-16T14:52:23.033+0100] {standard_task_runner.py:91} INFO - Job 31: Subtask notify_discord
+[2025-11-16T14:52:23.033+0100] {logging_mixin.py:188} WARNING - /Users/imadsharof/Documents/Cours/MA1/Management datascience/Assignement3/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=91043) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-16T14:52:23.034+0100] {standard_task_runner.py:63} INFO - Started process 91044 to run task
+[2025-11-16T14:52:23.045+0100] {task_command.py:426} INFO - Running <TaskInstance: process_web_log.notify_discord manual__2025-11-16T13:52:15.404051+00:00 [running]> on host koosh.local
+[2025-11-16T14:52:23.063+0100] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='process_web_log' AIRFLOW_CTX_TASK_ID='notify_discord' AIRFLOW_CTX_EXECUTION_DATE='2025-11-16T13:52:15.404051+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-16T13:52:15.404051+00:00'
+[2025-11-16T14:52:23.063+0100] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-16T14:52:23.063+0100] {logging_mixin.py:188} INFO - Sending notification to Discord...
+[2025-11-16T15:07:47.942+0100] {local_task_job_runner.py:288} WARNING - Recorded pid 95990 does not match the current pid 91044
+[2025-11-16T15:07:47.942+0100] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-11-16T15:07:47.945+0100] {process_utils.py:132} INFO - Sending 15 to group 91044. PIDs of all processes in the group: [91044]
+[2025-11-16T15:07:47.945+0100] {process_utils.py:87} INFO - Sending the signal 15 to group 91044
+[2025-11-16T15:08:47.954+0100] {process_utils.py:150} WARNING - process psutil.Process(pid=91044, name='python3.12', status='running', started='14:52:23') did not respond to SIGTERM. Trying SIGKILL
+[2025-11-16T15:08:47.956+0100] {process_utils.py:87} INFO - Sending the signal 9 to group 91044
+[2025-11-16T15:08:47.960+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=91044, name='python3.12', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='14:52:23') (91044) terminated with exit code -9
+[2025-11-16T15:08:47.960+0100] {standard_task_runner.py:178} ERROR - Job 35 was killed before it finished (likely due to running out of memory)

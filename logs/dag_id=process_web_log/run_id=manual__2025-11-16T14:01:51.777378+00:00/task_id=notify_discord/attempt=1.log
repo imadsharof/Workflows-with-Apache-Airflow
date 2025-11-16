@@ -1,0 +1,16 @@
+[2025-11-16T15:19:31.667+0100] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-16T15:19:31.673+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_web_log.notify_discord manual__2025-11-16T14:01:51.777378+00:00 [queued]>
+[2025-11-16T15:19:31.675+0100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_web_log.notify_discord manual__2025-11-16T14:01:51.777378+00:00 [queued]>
+[2025-11-16T15:19:31.675+0100] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-16T15:19:31.679+0100] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): notify_discord> on 2025-11-16 14:01:51.777378+00:00
+[2025-11-16T15:19:31.684+0100] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'process_web_log', 'notify_discord', 'manual__2025-11-16T14:01:51.777378+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/process_web_log.py', '--cfg-path', '/var/folders/8s/qyzh_26n0vb1qz3ft50_pn1c0000gn/T/tmp3ukhr_lq']
+[2025-11-16T15:19:31.685+0100] {standard_task_runner.py:91} INFO - Job 58: Subtask notify_discord
+[2025-11-16T15:19:31.685+0100] {logging_mixin.py:188} WARNING - /Users/imadsharof/Documents/Cours/MA1/Management datascience/Assignement3/.venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=99105) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-16T15:19:31.686+0100] {standard_task_runner.py:63} INFO - Started process 99109 to run task
+[2025-11-16T15:19:31.701+0100] {task_command.py:426} INFO - Running <TaskInstance: process_web_log.notify_discord manual__2025-11-16T14:01:51.777378+00:00 [running]> on host koosh.local
+[2025-11-16T15:19:31.720+0100] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='process_web_log' AIRFLOW_CTX_TASK_ID='notify_discord' AIRFLOW_CTX_EXECUTION_DATE='2025-11-16T14:01:51.777378+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-16T14:01:51.777378+00:00'
+[2025-11-16T15:19:31.721+0100] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-16T15:19:31.721+0100] {logging_mixin.py:188} INFO - Sending notification to Discord...
+[2025-11-16T15:19:34.289+0100] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-11-16T15:19:34.294+0100] {process_utils.py:132} INFO - Sending 15 to group 99109. PIDs of all processes in the group: [99109]
+[2025-11-16T15:19:34.294+0100] {process_utils.py:87} INFO - Sending the signal 15 to group 99109
